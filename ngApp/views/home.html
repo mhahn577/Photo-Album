@@ -1,0 +1,29 @@
+
+<form>
+  <button class="btn btn-primary" ng-click="controller.pickFile()"=>Add Photo</button>
+</form>
+
+      <hr style="border: 1px solid Maroon"/>
+
+<ul>
+  <li ng-repeat="photo in controller.photos">
+    <p>Photo Name: {{photo.name}}</p>
+    <p>Description: {{photo.description}}</p>
+    <p>URL: {{photo.imageURL}}</p>
+    <img src={{photo.imageURL}} alt="Photo Image" height="180" width="275">
+    <p><a href="/edit/{{photo._id}}">edit</a></p>
+    <p><a href="#" ng-click="controller.remove(photo._id)">delete</a></p>
+  </li>
+</ul>
+
+<ul class="bg-danger">
+  <li ng-repeat="error in controller.validationErrors">
+      {{error.message}}
+  </li>
+</ul>
+
+<style type="text/css">
+img {
+   border:7px solid Black;
+}
+</style>

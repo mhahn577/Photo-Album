@@ -1,0 +1,15 @@
+<form ng-submit="controller.save()">
+  <div class="form-group">
+    <label>Name:</label>
+    <input ng-model="controller.photo.name" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>Description:</label>
+    <input ng-model="controller.photo.description" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label>Image URL:</label>
+    <input ng-model="controller.photo.imageURL" class="form-control" />
+  </div>
+  <button class="btn btn-primary">Edit Photo</button>
+</form>
